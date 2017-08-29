@@ -1,7 +1,7 @@
 FROM debian:stable
 MAINTAINER Lachlan de Waard <dockerlachlan@dewaard.email>
 
-RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y --install-recommends procps icecast2 && rm -rf /var/lib/apt/lists/* 
+RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y --install-recommends icecast2 && rm -rf /var/lib/apt/lists/* 
 
 ADD status2.xsl /usr/share/icecast2/web/
 ADD icecast.xml /etc/icecast2/
